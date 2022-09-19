@@ -1,0 +1,15 @@
+<h2>Update product</h2>
+<div *ngIf="product">
+    <h2>{{product.name}} Info</h2>
+    <div>
+        <span>id: </span>{{product.id}}
+    </div>
+    <div>
+        <label for="product-name">Product Name: </label>
+        <input id="product-name" [(ngModel)]="product.name" placeholder="name">
+        <label for="product-price">Product Price: </label>
+        <input id="product-price" [(ngModel)]="product.price" type="number">
+    </div>
+    <button type="button" (click)="save()">Save</button>
+    <button type="button" (click)="goBack()">Back</button>
+</div>

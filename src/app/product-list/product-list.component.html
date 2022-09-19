@@ -1,0 +1,33 @@
+<h2 class="title">Product List</h2>
+<!-- <ul class="products">
+    <li *ngFor="let product of products">
+        <a>
+            <span class="data">{{product.id}}</span>
+            <span class="data">{{product.name}}</span>
+            <span class="data">{{product.price}}</span>
+        </a>
+    </li>
+</ul> -->
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th class="tb-tit" scope="col">ID</th>
+                <th class="tb-tit" scope="col">Name</th>
+                <th class="tb-tit" scope="col">Price</th>
+                <th class="tb-tit" scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td class="data">{{product.id}}</td>
+                <td class="data">{{product.name}}</td>
+                <td class="data">{{product.price}}</td>
+                <button class="btn" routerLink="/update/{{product.id}}">Update</button>
+                <button type="button" class="btn" (click)="delete(product)">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<button type="button" class="btn" routerLink="/add">Add</button>

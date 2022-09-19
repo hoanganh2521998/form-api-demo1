@@ -1,0 +1,15 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table {
+    width: 60%;
+}
+
+.tb-tit {
+    text-align: left;
+}
+
+.products {
+    list-style: none;
+}

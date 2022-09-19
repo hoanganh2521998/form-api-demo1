@@ -1,0 +1,11 @@
+<h2>Add product</h2>
+<div>
+    <label for="product-name">Product: </label>
+    <input id="product-name" #productName type="text" placeholder="name">
+</div>
+<div>
+    <label for="product-price">Product: </label>
+    <input id="product-price" #productPrice type="number" placeholder="price">
+</div>
+<button type="button" (click)="add(productName.value, productPrice.value)">save</button>
+<button type="button" (click)="goBack()">back</button>
